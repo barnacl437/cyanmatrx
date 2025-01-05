@@ -1,0 +1,116 @@
+* {
+  font-family: Intel One Mono, monospace;
+  --main-color: #050e1a;
+  --secondary-color: ##73f1fa; // 5cddfa
+}
+html,
+body {
+  color: var(--secondary-color) I !important;
+  --tab-shadow-max-size: 0px !important;
+  --tab-block-margin: 0px !important;
+}
+#bookmarks-menu,
+tab {
+  font-size: 14px !important;
+  width: 64px !important ;
+}
+::-moz-placeholder {
+  color: red;
+  opacity: 0 !important;
+  display: none !important;
+}
+
+.tab-icon-image {
+  display: none;
+}
+
+#urlbar {
+  font-size: 14px !important;
+  color: white !important;
+  font-family: Intel One Mono, monospace;
+  background-color: #5cddfa;
+}
+
+#urlbar-input-container:focus {
+  padding: 0 !important;
+}
+
+#searchbar {
+  font-size: 20px !important;
+  color: white !important;
+}
+
+#PersonalToolbar,
+#navigator-toolbox,
+#nav-bar-customization-target,
+#PanelUI-menu-button,
+#urlbar-background,
+#urlbar:focus,
+#urlbar-input {
+  background-color: var(--main-color) !important;
+  color: #5cddfa !important;
+}
+
+#identity-box {
+  background-color: var(--main-color) !important;
+  margin: 0;
+}
+/* There were to be attributes that define png images for titlebar buttons, I just don't like them so I'll comment it out here.
+
+.titlebar-close {
+  list-style-image: url(https://cdn-icons-png.flaticon.com/512/14035/14035711.png) !important;
+  padding: 0px !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.titlebar-max,
+.titlebar-restore {
+  list-style-image: url(https://cdn-icons-png.flaticon.com/512/14035/14035769.png) !important;
+  margin-left: 20px !important;
+  padding: 0 !important;
+}
+
+.titlebar-min {
+  -moz-default-appearance: -moz-window-button-maximize;
+  list-style-image: url(img/yellow-circle.png) !important;
+  padding: 0 !important;
+}
+*/
+
+.titlebar-button {
+  & > .toolbarbutton-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+.titlebar-button:hover {
+  background-color: transparent !important;
+  border-radius: 10px !important;
+}
+
+// no idea how to change tab size (so that it can show longer title text), set width to 12.5% but seems not work, still looking in it
+tab:is([visuallyselected], [multiselected]) {
+  color: var(--secondary-color) !important;
+  background-color: var(--main-color) !important;
+  width: 12.5%;
+}
+
+:root:not(:-moz-lwtheme) {
+  --tab-selected-bgcolor: rgba(20, 80, 20, 0.174) !important;
+}
+
+#import-button {
+  display: none;
+}
+
+#PlacesToolbarItems toolbarbutton image {
+  display: none !important;
+}
+
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  &:not([disabled], [open]):hover {
+    background-color: rgba(20, 80, 20, 0.174) !important;
+  }
+}
