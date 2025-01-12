@@ -1,6 +1,9 @@
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
   body {
-    background-color: #191919 !important;
+    background-color: #050e1a !important;
+    color: #73f1fa !important;
+    /* change your background below ig idk if it works lol */ 
+    background-image: url("")
   }
 
   .search-wrapper {
